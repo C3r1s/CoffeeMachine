@@ -3,14 +3,11 @@ namespace Exercise2;
 public interface ICoffeemachine
 {
     public void Power();
-    private protected void AddWater();
-    private protected void Protection();
-    private protected int AddCoffeeBeans();
-    private protected int AddMilk();
-    private protected void CheckIngredients();
-    private protected void CheckCleaning();
-    private protected void PrepareToWork();
-    private protected void Brewing();
-    private protected void Cleaning();
-    
+    protected internal void Protection(string name);
+    protected internal void CheckEmptyIngredients();
+    protected internal void CheckCleaning();
+    protected internal void PrepareToBrew(bool Water, bool Milk, bool Coffee);
+    public void OrderingMenu();
+    protected internal void Cleaning();
+    protected internal int AddIngredients(string ingridientName, int ingridientQuanity, int maxQuanity);
 }
